@@ -77,11 +77,11 @@ class Libreria(Libro):
     def calcularPrecios(self):
         for i in self.libros:
             self.preciosTotal += i.precio
-            print(self.preciosTotal)
+            return self.preciosTotal
 
 libreria = Libreria(libros)
 
-libreria.calcularPrecios()
+print(libreria.calcularPrecios())
 
 """ Vehiculo: Implementar las clases Vehiculo, Coche, Motocicleta y
 Bicicleta. La clase Vehiculo debe tener propiedades como marca,
@@ -103,10 +103,10 @@ class Coche(Vehiculo):
 
     def cargarNafta(self,cant_cargada):
         self.cant_nafta = self.cant_nafta + cant_cargada
-        return print(f"La cantidad de nafta que queda es de {self.cant_nafta}")
+        return f"La cantidad de nafta que queda es de {self.cant_nafta}"
     
     def verPatente(self):
-        return print(f"La patente del coche es {self.patente}")
+        return f"La patente del coche es {self.patente}"
     
 class Motocicleta(Vehiculo):
     def __init__(self, marca, modelo, velocidad_maxima, cilindradas, peso_kg):
@@ -115,11 +115,11 @@ class Motocicleta(Vehiculo):
         self.peso_kg = peso_kg
 
     def verCilindradas(self):
-        return print(f"Las cilindradas de la moto son: {self.cilindradas}")
+        return f"Las cilindradas de la moto son: {self.cilindradas}"
     
     def calcularPesoTotal(self, peso_persona):
         pesoTotal = self.peso_kg + peso_persona
-        return print(f"El peso total de la moto mas el conductor es {pesoTotal}")
+        return f"El peso total de la moto mas el conductor es {pesoTotal}"
     
 class Bicicleta(Vehiculo):
     def __init__(self, marca, modelo, velocidad_maxima, color, numero_velocidades):
@@ -129,12 +129,12 @@ class Bicicleta(Vehiculo):
 
     def cambiarColor(self, color_nuevo):
         self.color = color_nuevo
-        return print(f"Cambiaste el color de la bicicleta por {self.color}")
+        return f"Cambiaste el color de la bicicleta por {self.color}"
     
     def cambiarVelocidad(self):
         self.numero_velocidades = self.numero_velocidades + 1
-        return print(f"Cambiaste la velocidad a {self.numero_velocidades}")
+        return f"Cambiaste la velocidad a {self.numero_velocidades}"
 
 bicicleta = Bicicleta("GTO","RT345",100,"rojo",1) 
 
-bicicleta.cambiarVelocidad()
+print(bicicleta.cambiarVelocidad())
