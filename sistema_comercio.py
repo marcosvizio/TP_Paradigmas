@@ -14,8 +14,8 @@ class Producto():
         return self._id
     
 class Carrito():
-    def __init__(self, productos:list):
-        self.productos = productos
+    def __init__(self):
+        self.productos = []
         self.total = 0
 
     def agregar_producto(self, producto):
@@ -35,18 +35,7 @@ class Cliente():
     def __init__(self, productos, nombre, direccion):
         self.nombre = nombre
         self._direccion = direccion
-        self.carrito = Carrito(productos)
-        
-
-    def agregar_producto(self,producto):
-        return self.carrito.agregar_producto(producto)
-        
-    
-    def eliminar_producto(self, producto):
-        return self.carrito.eliminar_producto(producto)
-    
-    def calcular_total(self):
-        return self.carrito.calcular_total()
+        self.carrito = Carrito()
 
     def consultar_carrito(self):
         print("Carrito:")
@@ -67,15 +56,15 @@ producto2 = Producto("Dulce de leche", 50, 10, "njsnds231")
 
 cliente = Cliente([],"Marcos","Avenida Falsa 1234")
 
-cliente.agregar_producto(producto1)
+cliente.carrito.agregar_producto(producto1)
 
-cliente.agregar_producto(producto2)
+cliente.carrito.agregar_producto(producto2)
 
-cliente.calcular_total()
+cliente.carrito.calcular_total()
 
 cliente.consultar_carrito()
 
-cliente.eliminar_producto(producto2)
+cliente.carrito.eliminar_producto(producto2)
 
 cliente.consultar_carrito()
 

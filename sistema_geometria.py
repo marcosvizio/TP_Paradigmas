@@ -36,37 +36,37 @@ class Figura3D(ABC):
 
 class Cubo(Figura3D):
     def calcular_volumen(self):
-        return print(self.lados[0]**3)
+        return self.lados[0]**3
     
     def calcular_area(self):
-        return print(6*self.lados[0]**2)
+        return 6*self.lados[0]**2
     
 class Esfera(Figura3D):
     def calcular_volumen(self):
-        return print(4/3*self.pi*(self.radio**3))
+        return 4/3*self.pi*(self.radio**3)
 
     def calcular_area(self):
-        return print(4*self.pi*(self.radio**2))
+        return 4*self.pi*(self.radio**2)
     
 class Cilindro(Figura3D):
     def calcular_volumen(self):
-        return print(self.pi*(self.radio**2)*self.altura)
+        return self.pi*(self.radio**2)*self.altura
     
     def calcular_area(self):
-        return print(2*self.pi*(self.radio**2)+(2*self.pi*self.radio*self.altura))
+        return 2*self.pi*(self.radio**2)+(2*self.pi*self.radio*self.altura)
     
 cubo = Cubo(0,0,(5,0))
 
-cubo.calcular_volumen()
-cubo.calcular_area()
+print(cubo.calcular_volumen())
+print(cubo.calcular_area())
 
 esfera = Esfera(0,6,())
 
-esfera.calcular_volumen()
-esfera.calcular_area()
+print(esfera.calcular_volumen())
+print(esfera.calcular_area())
 
 cilindro = Cilindro(6,3,())
 
-cilindro.calcular_volumen()
-cilindro.calcular_area()
+print(cilindro.calcular_volumen())
+print(cilindro.calcular_area())
     

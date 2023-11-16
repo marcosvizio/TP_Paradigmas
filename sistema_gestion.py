@@ -17,11 +17,11 @@ class Empleado(Persona):
     def calcular_salario(self):
         if self.cargo == "senior":
             self._salario = self._salario * 2
-            return print(f"El salario es de {self.salario}")
+            return f"El salario es de {self.salario}"
         elif self.cargo == "semi":
             self._salario = self.salario * 1.5
-            return print(f"El salario es de {self.salario}")
-        return print(f"El salario es de {self.salario}")
+            return f"El salario es de {self.salario}"
+        return f"El salario es de {self.salario}"
 
     @property
     def salario(self):
