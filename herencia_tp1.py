@@ -15,6 +15,8 @@ class Perro(Animal):
         self.raza = raza
         self.color_pelaje = color_pelaje
 
+    """ Herencia = relacion 'es un' """
+
     def ladrar(self):
         return print("Guau")
     

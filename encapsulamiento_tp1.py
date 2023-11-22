@@ -25,11 +25,18 @@ class CuentaBancaria():
         transaccion = f"Monto retirado: {monto_retirado}, fecha: {fecha_actual}"
         self._transacciones.append(transaccion)
         return f"El saldo actual es de {self._saldo}"
+    
+    def cambiar_titular(self, newTitular):
+        self.titular = newTitular
+        return f"El nuevo titular es {newTitular}"
+
 
     def mostrar_datos(self):
         return f"Titular: {self.titular}. Saldo: {self._saldo}. CBU: {self.cbu}. ULTIMAS TRANSACCIONES: {self._transacciones}."
     
 cuenta = CuentaBancaria("Marcos Vizio", 15000, "0080156464555846", [])
+
+cuenta.cambiar_titular("Agustin")
 
 print(cuenta.mostrar_datos())
 

@@ -50,13 +50,22 @@ class Perro(Animal):
     def hacer_sonido(self):
         return super().hacer_sonido()
     
+    def atacar(self):
+        return f"Te mordi"
+    
 class Gato(Animal):
     def hacer_sonido(self):
         return super().hacer_sonido()
     
+    def atacar(self):
+        return f"Te arañe"
+    
 class Pollito(Animal):
     def hacer_sonido(self):
         return super().hacer_sonido()
+    
+    def atacar(self):
+        return f"Te pique"
     
 perro = Perro("Milo", 3, "Guau")
 
